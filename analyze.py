@@ -1,7 +1,7 @@
 from janome.tokenizer import Tokenizer
 import openai
 
-openai.api_key = "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"
+openai.api_key = "Your OpenAI's api key"
 
 def analyze_text(text):
     t = Tokenizer()
