@@ -16,9 +16,12 @@ def index():
         
         # MeCabで解析する
         analyzed_text = analyze_text(text)
+        print(analyzed_text)
+        result = text.replace("バカ","ハート")
+
         
         # 解析結果を表示する
-        return render_template("result.html",text=analyzed_text)
+        return render_template("result.html",text=result)
     
     else:
         openAI()
