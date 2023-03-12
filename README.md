@@ -2,6 +2,9 @@
 
 ### 使い方
 環境変数にOpenAIのAPIキーを入れておくこと．
-```bash
+```~/.bash_profile
 export OPENAI_API_KEY="sk-xxxxxxxxxx"
+```
+```bash
+source ~/.bash_profile
 ```
