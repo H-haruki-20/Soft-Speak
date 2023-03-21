@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-from analyze import analyze_text,openAI
+from analyze import *
+from OpenAI import *
 
 app = Flask(__name__)
 
@@ -14,17 +15,17 @@ def index():
         # 入力されたテキストを取得する
         text = request.form.get("input_text")
         
-        # MeCabで解析する
-        analyzed_text = analyze_text(text)
-        print(analyzed_text)
-        result = text.replace("バカ","ハート")
-
+        result,word = ProfanityFilter(text)
+        print(f"result : {result}")
+        print(f"word : {word}")
+        if result:
+            # 悪口の部分の言い換えを行う (Chat-GPT)
+            final = text.replace(word,"ペンギン")
         
         # 解析結果を表示する
-        return render_template("result.html",text=result)
+        return render_template("result.html",text=final)
     
     else:
-        openAI()
         return render_template("index.html")
 
 if __name__ == "__main__":
