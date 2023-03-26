@@ -14,33 +14,19 @@
         <textarea rows="5" cols="33" name="input_text"></textarea>
         <input type="submit" value="送信" id="button">
     </form>
-    <div class="bottom-fixed-button" id="report-footer">
-        <h4>以下の文章はちくちく言葉ですか？</h4>
-            
-        <p id="tikutiku">{{target}}</p>
-        <table>
-            <tr>
-                <td><a href="javascript:Yes();" id="yes" class="btn_06">はい</a></td>
-                <td><a href="javascript:No();" id="no" class="btn_06">いいえ</a></td>
-            </tr>
-        </table>
-        <div id="num" hidden>{{num}}</div>
-          
-     
-    </div>
 </body>
 <script>
     // バナーの「はい」，「いいえ」が押されたときの処理
     const foot = document.getElementById("report-footer");
     function Yes(){
-      foot.style.display="none";
-      let tikutiku = document.getElementById("num").innerHTML;
-      window.location.href = "/count?num=" + tikutiku;
+        foot.style.display="none";
+        window.location.href = "/count?bool=True";
     }
 
     function No(){
-      foot.style.display = "none";
+        foot.style.display="none";
     }
+
 
 
 

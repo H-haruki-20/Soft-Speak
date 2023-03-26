@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>解析結果</title>
-  </head>
-  <body>
-    <p>解析結果：</p>
-    <p>{{ text }}</p>
-  </body>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>SoftSpeak</title>
+<meta name="description"  content="ちくちく言葉をふわふわ言葉に変換します">
+<meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+
+	<link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="splash">
+		<div id="splash_logo">
+            <img src="/static/img/logo.png" alt="" class="fadeUp">
+        </div>
+	</div>
+
+	<main>
+    <div id="container">
+      <p>ふわふわ言葉にした結果です！</p>
+      <!--/container-->
+      <h2>{{ text }}</h2>
+      <p id="center">ふわふわ言葉じゃないなと思った方はこちらに該当するワードを記入して報告してください!</p>
+      <form action="/report" method="POST">
+        <textarea rows="5" cols="33" name="report_text"></textarea>
+        <button type="submit" value="Submit" class="col-1-4">Report</button>
+      </form>
+    </div>
+
+    <div class="bottom-fixed-button">
+      <div class="container">
+        <h6>もっとフワフワにしたいですか？</h6>
+        <a href="/more-fuwafuwa" class="btn_07">はい</a>
+      </div>
+    </div>
+	</main>
+<!--==============JQuery読み込み===============-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/static/js/splash.js"></script>
+</body>
 </html>
