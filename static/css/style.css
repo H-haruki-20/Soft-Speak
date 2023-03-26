@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+
+.center{
+    text-align: center;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:#333;
+  text-align:center;
+  color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width:460px;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+h2{
+  padding: 20px 0 0 0;
+}
+#center{
+  padding: 140px 0 0 0;
+}
+.col-1-4{
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  margin: auto;
+  padding: 1rem 4rem;
+  font-weight: bold;
+  color: #27acd9;
+  border-bottom: 2px solid #27acd9;
+  border-radius: 100vh;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+  transition: 0.5s;
+  background: white;
+}
+
+.col-1-4:hover{
+  color: #fff;
+  background: #27acd9;
+  border-bottom: 2px solid #fff;
+  transform: translateY(3px);
+}
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+    width:100%;
+    height: 100vh;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+a{
+    color: #333;
+}
+
+a:hover{
+  text-decoration: none;   
+}
+
+a.btn_07 {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 120px;
+  margin: auto;
+  padding: 1rem 4rem;
+  font-weight: bold;
+  color: #27acd9;
+  border-bottom: 2px solid #27acd9;
+  border-radius: 100vh;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+  transition: 0.5s;
+   background: white;
+ }
+ a.btn_07:hover {
+  color: #fff;
+  background: #27acd9;
+  border-bottom: 2px solid #fff;
+  transform: translateY(3px);
+ }
+ .container {
+   font-family: arial;
+   font-size: 24px;
+   margin: 25px;
+   height: 200px;
+   text-align: center;
+ }
+ 
+ p {
+   /* 水平方向の中央揃え */
+   text-align: center;
+ }
+ .bottom-fixed-button {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 200px;
+   padding-top: 8px;
+   text-align: center;
+   background: #fff0f5;
+   border-top: 4px solid #fff;
+ }
+ 
+ .bottom-fixed-button button {
+   font-size: 24px;
+   cursor: pointer;
+   vertical-align: middle;
+ }
+ 
+ .bottom-fixed-button button:hover {
+   opacity: 0.8;
+ }
