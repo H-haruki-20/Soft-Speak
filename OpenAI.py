@@ -2,7 +2,6 @@ from janome.tokenizer import Tokenizer
 import openai
 import os
 import sys
-import gensim   
 
 if "OPENAI_API_KEY" not in os.environ:
     print("ERROR: OPENAI_API_KEY environment variable not found.")
