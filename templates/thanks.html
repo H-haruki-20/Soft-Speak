@@ -1,1 +1,59 @@
-<h1>ありがたい</h1>
+<p class="sample_h_6" style="text-align:center">ご協力ありがとうございました</p>
+<style>.sample_h_6{
+    font-size: 1.5em;/* フォントサイズ */
+    font-weight: bold;/* フォント太さ */
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    background-color: #399837;/* 背景色 */
+    border-radius:15px;/* 角丸 */
+    color: #ffffff;/* フォント色 */
+    }
+    .btn01 a {
+        background-color: #ceb849;
+        border: 1px solid #ceb849;
+    }
+    
+    .btn01 a:hover {
+        background-color: #B99b00;
+        border: 1px solid #333;
+    }
+    
+    .btn01 a::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -35px;
+        transform: translateY(-50%);
+        width: 70px;
+        height: 1px;
+        background-color: #333;
+    }
+
+    .btn a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 300px;
+        height: 60px;
+        color: #333;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: 0.3s;
+        margin: auto;
+
+    }
+    img{
+        padding-bottom: 20px;
+    }
+    
+    .btn a:hover {
+        color: #f2f2f2;
+    }
+</style>
+<div style="text-align: center"><img src="/static/img/pengine2.jpg" width="400" height="400"></div>
+<div class="btn btn01">
+	<a href="/">ホームに戻る</a>
+</div>
